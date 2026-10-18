@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SeatScope HelpBot</title>
+    <link rel="stylesheet" href="helpbot.css">
+</head>
+
+<body>
+
+    <div class="helpbot">
+
+        <button id="helpbotToggle" class="helpbot-toggle" aria-label="Open SeatScope HelpBot">
+            <span>💬</span>
+        </button>
+
+        <div id="helpbotWindow" class="helpbot-window">
+
+            <div class="helpbot-header">
+                <div>
+                    <div class="bot-title">SeatScope HelpBot</div>
+                    <div class="bot-status">
+                        <span class="status-dot"></span>
+                        Online
+                    </div>
+                </div>
+
+                <button id="helpbotClose" class="close-btn">×</button>
+            </div>
+
+            <div id="chatMessages" class="chat-messages">
+
+                <div class="message bot-message">
+                    <div class="message-bubble">
+                        👋 Hi! I'm <strong>SeatScope HelpBot</strong>.<br><br>
+                        I can help you understand SeatScope, KCET cutoffs,
+                        chances, counselling rounds and your choice list.
+                    </div>
+                </div>
+
+                <div class="quick-questions">
+                    <button data-question="How does SeatScope work?">
+                        How does SeatScope work?
+                    </button>
+
+                    <button data-question="What does High Chance mean?">
+                        What does High Chance mean?
+                    </button>
+
+                    <button data-question="What are Dream, Realistic and Safe choices?">
+                        Dream / Realistic / Safe?
+                    </button>
+
+                    <button data-question="Is admission guaranteed?">
+                        Is admission guaranteed?
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="typing-indicator" id="typingIndicator">
+                SeatScope HelpBot is typing...
+            </div>
+
+            <div class="chat-input-area">
+
+                <input
+                    type="text"
+                    id="chatInput"
+                    placeholder="Ask something..."
+                    autocomplete="off"
+                >
+
+                <button id="sendMessage" aria-label="Send message">
+                    ➤
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="helpbot.js"></script>
+
+</body>
+</html>

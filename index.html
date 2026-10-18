@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SeatScope - KCET College Predictor</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+    <!-- =========================
+         SIDEBAR
+    ========================== -->
+
+    <aside class="sidebar" id="sidebar">
+
+        <a href="#home" class="side-brand">
+            <span class="side-logo"><svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                <defs><linearGradient id="ssGradSide" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2563eb"/><stop offset="1" stop-color="#7c3aed"/></linearGradient></defs>
+                <rect width="120" height="120" rx="28" fill="url(#ssGradSide)"/>
+                <circle cx="60" cy="60" r="34" fill="none" stroke="#fff" stroke-width="7"/>
+                <circle cx="60" cy="60" r="16" fill="none" stroke="#fff" stroke-width="7"/>
+                <circle cx="60" cy="60" r="6" fill="#fff"/>
+              </svg></span>
+            <span class="side-name">Seat<span>Scope</span></span>
+        </a>
+
+        <nav class="side-nav">
+
+            <span class="side-label">MENU</span>
+
+            <a href="#home" class="side-link" data-spy="home"><i>🏠</i>Dashboard</a>
+            <a href="#counselling" class="side-link" data-spy="counselling"><i>🎯</i>Predictor</a>
+            <a href="#results" class="side-link" data-spy="results"><i>📊</i>My Results</a>
+            <a href="#choice-list" class="side-link" data-spy="choice-list"><i>📝</i>Choice List</a>
+
+            <span class="side-label">EXPLORE</span>
+
+            <a href="college-locations/locations.html" class="side-link"><i>🔎</i>College Search</a>
+            <a href="#how-it-works" class="side-link" data-spy="how-it-works"><i>🧭</i>How It Works</a>
+            <a href="#features" class="side-link" data-spy="features"><i>✨</i>Features</a>
+            <a href="#about" class="side-link" data-spy="about"><i>ℹ️</i>About</a>
+
+        </nav>
+
+        <div class="side-note">
+            <strong>Historical data only</strong>
+            <span>Cutoffs from past years are indicators, not an admission guarantee.</span>
+        </div>
+
+    </aside>
+
+    <div class="side-overlay" id="sideOverlay"></div>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <button type="button" class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+
+            <span class="topbar-title">
+                <b>Dashboard</b>
+                <small>KCET / UGCET counselling</small>
+            </span>
+
+            <a href="#home" class="logo">
+                Seat<span>Scope</span>
+            </a>
+
+            <nav class="nav-links">
+
+                <a href="#home">
+                    Home
+                </a>
+
+                <a href="#how-it-works">
+                    How It Works
+                </a>
+
+                <a href="#features">
+                    Features
+                </a>
+
+                <a href="college-locations/locations.html">
+                    College Search
+                </a>
+
+            </nav>
+
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section id="home" class="hero">
+
+        <!-- floating background visuals (decorative only) -->
+        <div class="hero-floaters" aria-hidden="true">
+
+            <div class="float-layer" data-depth="14">
+                <div class="float-logo float-logo-big">
+                    <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="ssGrad" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0" stop-color="#2563eb"/>
+                            <stop offset="1" stop-color="#7c3aed"/>
+                        </linearGradient>
+                    </defs>
+                    <rect width="120" height="120" rx="28" fill="url(#ssGrad)"/>
+                    <circle cx="60" cy="60" r="34" fill="none" stroke="#fff" stroke-width="5" opacity="0.95"/>
+                    <circle cx="60" cy="60" r="18" fill="none" stroke="#fff" stroke-width="5" opacity="0.8"/>
+                    <circle cx="60" cy="60" r="6" fill="#fff"/>
+                    <path d="M60 14v20M60 86v20M14 60h20M86 60h20" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+                </svg>
+                </div>
+            </div>
+
+            <div class="float-layer" data-depth="26">
+                <div class="float-logo float-logo-small">
+                    <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="ssGrad2" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0" stop-color="#2563eb"/>
+                            <stop offset="1" stop-color="#7c3aed"/>
+                        </linearGradient>
+                    </defs>
+                    <rect width="120" height="120" rx="28" fill="url(#ssGrad2)"/>
+                    <circle cx="60" cy="60" r="34" fill="none" stroke="#fff" stroke-width="5" opacity="0.95"/>
+                    <circle cx="60" cy="60" r="18" fill="none" stroke="#fff" stroke-width="5" opacity="0.8"/>
+                    <circle cx="60" cy="60" r="6" fill="#fff"/>
+                    <path d="M60 14v20M60 86v20M14 60h20M86 60h20" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+                </svg>
+                </div>
+            </div>
+
+            <div class="float-layer" data-depth="34">
+                <div class="float-card fc-1">
+                    <span>Your Rank</span>
+                    <strong>8,000</strong>
+                </div>
+            </div>
+
+            <div class="float-layer" data-depth="22">
+                <div class="float-card fc-2">
+                    <span class="dot high"></span>
+                    High Chance
+                    <small>Example</small>
+                </div>
+            </div>
+
+            <div class="float-layer" data-depth="40">
+                <div class="float-card fc-3">
+                    <span>Historical Match</span>
+                    <strong>75%</strong>
+                    <div class="fc-bar"><i></i></div>
+                </div>
+            </div>
+
+            <div class="float-layer" data-depth="18">
+                <div class="float-chip fc-4">Dream</div>
+                <div class="float-chip fc-5">Realistic</div>
+                <div class="float-chip fc-6">Safe</div>
+            </div>
+
+        </div>
+
+        <div class="hero-content">
+
+            <div class="hero-badge">
+                🎓 KCET / UGCET College Guidance
+            </div>
+
+            <h1>
+                Find Colleges That Match
+                <span>Your Rank</span>
+            </h1>
+
+            <p>
+                Explore Karnataka colleges and courses using
+                historical KCET cutoff data and build your
+                counselling choice list with confidence.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a
+                    href="#counselling"
+                    id="findOptionsBtn"
+                    class="primary-btn"
+                >
+                    Find My College
+                    <span>→</span>
+                </a>
+
+                <button
+                    id="learnMoreBtn"
+                    class="secondary-btn"
+                    type="button"
+                >
+                    Learn More
+                </button>
+
+            </div>
+
+            <div class="hero-note">
+                Historical indicators only • Not an admission guarantee
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         COUNSELLING FORM
+    ========================== -->
+
+    <section
+        id="counselling"
+        class="counselling-section"
+    >
+
+        <div class="section-container">
+
+            <div class="section-heading">
+
+                <span class="small-title">
+                    COUNSELLING PREDICTOR
+                </span>
+
+                <h2>
+                    Find Your College Options
+                </h2>
+
+                <p>
+                    Enter your counselling details and SeatScope
+                    will compare your rank with available historical
+                    cutoff records.
+                </p>
+
+            </div>
+
+
+            <form
+                id="counsellingForm"
+                class="counselling-form"
+            >
+
+                <!-- RANK -->
+
+                <div class="form-group">
+
+                    <label for="rank">
+                        KCET / UGCET Rank
+                    </label>
+
+                    <input
+                        type="number"
+                        id="rank"
+                        name="rank"
+                        placeholder="Example: 16000"
+                        min="1"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- CATEGORY -->
+
+                <div class="form-group">
+
+                    <label for="category">
+                        Category
+                    </label>
+
+                    <select
+                        id="category"
+                        name="category"
+                        required
+                    >
+
+                        <option value="">
+                            Select Category
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- SEAT TYPE -->
+
+                <div class="form-group">
+
+                    <label for="seatType">
+                        Seat Type / Quota
+                    </label>
+
+                    <select
+                        id="seatType"
+                        name="seatType"
+                    >
+
+                        <option value="">
+                            All Seat Types
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- COURSE GROUP -->
+
+                <div class="form-group">
+
+                    <label for="courseGroup">
+                        Course Group
+                    </label>
+
+                    <select
+                        id="courseGroup"
+                        name="courseGroup"
+                        required
+                    >
+
+                        <option value="">
+                            Select Course Group
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- BRANCH -->
+
+                <div class="form-group">
+
+                    <label for="branch">
+                        Branch / Course
+                    </label>
+
+                    <select
+                        id="branch"
+                        name="branch"
+                    >
+
+                        <option value="">
+                            All branches / courses
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- LOCATION -->
+
+                <div class="form-group">
+
+                    <label for="location">
+                        Preferred Location
+                    </label>
+
+                    <input
+                        type="text"
+                        id="location"
+                        name="location"
+                        placeholder="Example: Bengaluru"
+                    >
+
+                </div>
+
+
+                <!-- ROUND -->
+
+                <div class="form-group">
+
+                    <label for="round">
+                        Counselling Round
+                    </label>
+
+                    <select
+                        id="round"
+                        name="round"
+                        required
+                    >
+
+                        <option value="">
+                            Select Counselling Round
+                        </option>
+
+                        <option value="Round 1">
+                            Round 1
+                        </option>
+
+                        <option value="Round 2">
+                            Round 2
+                        </option>
+
+                        <option value="Final / Extended">
+                            Final / Extended
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- SUBMIT -->
+
+                <div class="form-submit">
+
+                    <button
+                        type="submit"
+                        class="primary-btn"
+                    >
+                        Find Colleges
+                        <span>→</span>
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         RESULTS
+    ========================== -->
+
+    <section
+        id="results"
+        class="results-section"
+        hidden
+    >
+
+        <div class="section-container">
+
+            <div class="section-heading">
+
+                <span class="small-title">
+                    YOUR RESULTS
+                </span>
+
+                <h2>
+                    Recommended College Options
+                </h2>
+
+                <p id="resultHistoricalText">
+                    Historical indication based on available
+                    verified years for the selected course and
+                    counselling round.
+                </p>
+
+            </div>
+
+
+            <!-- RESULT SUMMARY -->
+
+            <div class="result-summary">
+
+                <div class="summary-item">
+
+                    <span>
+                        Your Rank
+                    </span>
+
+                    <strong id="resultRank">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-item">
+
+                    <span>
+                        Category
+                    </span>
+
+                    <strong id="resultCategory">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-item">
+
+                    <span>
+                        Course
+                    </span>
+
+                    <strong id="resultCourse">
+                        —
+                    </strong>
+
+                </div>
+
+
+                <div class="summary-item">
+
+                    <span>
+                        Counselling Round
+                    </span>
+
+                    <strong id="resultYearRound">
+                        —
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <!-- COUNTS -->
+
+            <div class="result-counts">
+
+                <div class="count-card high">
+
+                    <span class="count-icon">
+                        ✓
+                    </span>
+
+                    <div>
+
+                        <strong id="highCount">
+                            0
+                        </strong>
+
+                        <span>
+                            High Chance
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="count-card moderate">
+
+                    <span class="count-icon">
+                        ~
+                    </span>
+
+                    <div>
+
+                        <strong id="moderateCount">
+                            0
+                        </strong>
+
+                        <span>
+                            Moderate Chance
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="count-card ambitious">
+
+                    <span class="count-icon">
+                        ↑
+                    </span>
+
+                    <div>
+
+                        <strong id="ambitiousCount">
+                            0
+                        </strong>
+
+                        <span>
+                            Ambitious
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="count-card total">
+
+                    <span class="count-icon">
+                        #
+                    </span>
+
+                    <div>
+
+                        <strong id="totalCount">
+                            0
+                        </strong>
+
+                        <span>
+                            Total Options
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- CHANCE CHARTS -->
+
+            <div class="chart-panel">
+
+                <div class="chart-card">
+
+                    <div class="chart-head">
+                        <h3>Options by Chance</h3>
+                        <span>Historical indicators</span>
+                    </div>
+
+                    <div class="chart-bars">
+
+                        <div class="bar-col">
+                            <b id="barHighVal">0</b>
+                            <div class="bar-wrap"><div class="bar high" id="barHigh"></div></div>
+                            <span>High</span>
+                        </div>
+
+                        <div class="bar-col">
+                            <b id="barModerateVal">0</b>
+                            <div class="bar-wrap"><div class="bar moderate" id="barModerate"></div></div>
+                            <span>Moderate</span>
+                        </div>
+
+                        <div class="bar-col">
+                            <b id="barAmbitiousVal">0</b>
+                            <div class="bar-wrap"><div class="bar ambitious" id="barAmbitious"></div></div>
+                            <span>Ambitious</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="chart-card donut-card">
+
+                    <div class="chart-head">
+                        <h3>Share of Options</h3>
+                    </div>
+
+                    <div class="donut-area">
+
+                        <div class="donut" id="chanceDonut">
+                            <div class="donut-hole">
+                                <strong id="donutTotal">0</strong>
+                                <span>options</span>
+                            </div>
+                        </div>
+
+                        <ul class="donut-legend">
+                            <li><i class="high"></i>High <b id="legHigh">0%</b></li>
+                            <li><i class="moderate"></i>Moderate <b id="legModerate">0%</b></li>
+                            <li><i class="ambitious"></i>Ambitious <b id="legAmbitious">0%</b></li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- HIGH -->
+
+            <div class="result-group">
+
+                <div class="result-group-heading">
+
+                    <span class="chance-label high">
+                        HIGH CHANCE
+                    </span>
+
+                    <h3>
+                        Strong Historical Options
+                    </h3>
+
+                </div>
+
+                <div
+                    id="highCollegeList"
+                    class="college-list"
+                >
+                </div>
+
+            </div>
+
+
+            <!-- MODERATE -->
+
+            <div class="result-group">
+
+                <div class="result-group-heading">
+
+                    <span class="chance-label moderate">
+                        MODERATE
+                    </span>
+
+                    <h3>
+                        Competitive Options
+                    </h3>
+
+                </div>
+
+                <div
+                    id="moderateCollegeList"
+                    class="college-list"
+                >
+                </div>
+
+            </div>
+
+
+            <!-- AMBITIOUS -->
+
+            <div class="result-group">
+
+                <div class="result-group-heading">
+
+                    <span class="chance-label ambitious">
+                        AMBITIOUS
+                    </span>
+
+                    <h3>
+                        Aspirational Options
+                    </h3>
+
+                </div>
+
+                <div
+                    id="ambitiousCollegeList"
+                    class="college-list"
+                >
+                </div>
+
+            </div>
+
+
+            <!-- DISCLAIMER -->
+
+            <div class="result-disclaimer">
+
+                <strong>
+                    Historical indicator only:
+                </strong>
+
+                SeatScope compares your rank with available
+                historical closing-rank records. Cutoffs can
+                change between years and counselling rounds.
+                Final admission depends on the official
+                counselling process, seat availability and
+                applicable eligibility rules.
+
+            </div>
+
+        </div>
+
+    </section>
+    <!-- =========================
+         CHOICE LIST
+    ========================== -->
+
+    <section
+        id="choice-list"
+        class="choice-section"
+    >
+
+        <div class="section-container">
+
+            <div class="section-heading">
+
+                <span class="small-title">
+                    COUNSELLING PLANNER
+                </span>
+
+                <h2>
+                    Build Your Choice List
+                </h2>
+
+                <p>
+                    Organize colleges into Dream, Realistic
+                    and Safe choices as you explore your options.
+                </p>
+
+
+                <div class="choice-actions">
+
+                <!-- EXPORT BUTTONS -->
+
+                <button
+                    id="exportPdfBtn"
+                    class="secondary-btn"
+                    type="button"
+                >
+                    📄 Export PDF
+                </button>
+
+
+                <button
+                    id="exportExcelBtn"
+                    class="secondary-btn"
+                    type="button"
+                >
+                    📊 Export Excel
+                </button>
+
+
+                <!-- CLEAR BUTTON -->
+
+                <button
+                    id="clearChoiceListBtn"
+                    class="secondary-btn"
+                    type="button"
+                >
+                    Clear Choice List
+                </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="choice-grid">
+
+                <!-- DREAM -->
+
+                <div class="choice-column dream">
+
+                    <div class="choice-heading">
+
+                        <span>
+                            ⭐
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Dream
+                            </h3>
+
+                            <p>
+                                Aspirational choices
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div id="dreamChoices">
+                    </div>
+
+                </div>
+
+
+                <!-- REALISTIC -->
+
+                <div class="choice-column realistic">
+
+                    <div class="choice-heading">
+
+                        <span>
+                            🎯
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Realistic
+                            </h3>
+
+                            <p>
+                                Competitive but possible
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div id="realisticChoices">
+                    </div>
+
+                </div>
+
+
+                <!-- SAFE -->
+
+                <div class="choice-column safe">
+
+                    <div class="choice-heading">
+
+                        <span>
+                            🛡️
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Safe
+                            </h3>
+
+                            <p>
+                                Strong historical indication
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                    <div id="safeChoices">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         HOW IT WORKS
+    ========================== -->
+
+    <section
+        id="how-it-works"
+        class="how-section"
+    >
+
+        <div class="section-container">
+
+            <div class="section-heading">
+
+                <span class="small-title">
+                    HOW IT WORKS
+                </span>
+
+                <h2>
+                    From Rank to Choice List
+                </h2>
+
+                <p>
+                    SeatScope simplifies the counselling research
+                    process into a few clear steps.
+                </p>
+
+            </div>
+
+
+            <div class="steps-grid">
+
+                <div class="step-card">
+
+                    <span class="step-number">
+                        01
+                    </span>
+
+                    <div class="step-icon">
+                        📝
+                    </div>
+
+                    <h3>
+                        Enter Your Details
+                    </h3>
+
+                    <p>
+                        Provide your KCET rank, category,
+                        course, location preference and
+                        counselling round.
+                    </p>
+
+                </div>
+
+
+                <div class="step-card">
+
+                    <span class="step-number">
+                        02
+                    </span>
+
+                    <div class="step-icon">
+                        📊
+                    </div>
+
+                    <h3>
+                        Historical Comparison
+                    </h3>
+
+                    <p>
+                        Your rank is compared with available
+                        verified historical closing-rank records.
+                    </p>
+
+                </div>
+
+
+                <div class="step-card">
+
+                    <span class="step-number">
+                        03
+                    </span>
+
+                    <div class="step-icon">
+                        🎯
+                    </div>
+
+                    <h3>
+                        Understand Your Options
+                    </h3>
+
+                    <p>
+                        Explore High, Moderate and Ambitious
+                        historical indications.
+                    </p>
+
+                </div>
+
+
+                <div class="step-card">
+
+                    <span class="step-number">
+                        04
+                    </span>
+
+                    <div class="step-icon">
+                        📋
+                    </div>
+
+                    <h3>
+                        Build Your Choices
+                    </h3>
+
+                    <p>
+                        Add suitable colleges to your Dream,
+                        Realistic and Safe choice categories.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FEATURES
+    ========================== -->
+
+    <section
+        id="features"
+        class="features-section"
+    >
+
+        <div class="section-container">
+
+            <div class="section-heading">
+
+                <span class="small-title">
+                    FEATURES
+                </span>
+
+                <h2>
+                    Everything You Need for Counselling Research
+                </h2>
+
+                <p>
+                    SeatScope brings the most useful counselling
+                    information together in one place.
+                </p>
+
+            </div>
+
+
+            <div class="features-grid">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        🎯
+                    </div>
+
+                    <h3>
+                        Rank-Based Recommendations
+                    </h3>
+
+                    <p>
+                        Explore college and course options by
+                        comparing your rank with historical
+                        closing ranks.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        📈
+                    </div>
+
+                    <h3>
+                        Historical Cutoffs
+                    </h3>
+
+                    <p>
+                        View historical cutoff information with
+                        year, round, category and seat-type context.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        📋
+                    </div>
+
+                    <h3>
+                        Choice List Planner
+                    </h3>
+
+                    <p>
+                        Organize selected colleges into Dream,
+                        Realistic and Safe categories.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        📍
+                    </div>
+
+                    <h3>
+                        College Search
+                    </h3>
+
+                    <p>
+                        Search colleges by name or college code
+                        and view available location and course
+                        information.
+                    </p>
+
+                    <a
+                        href="college-locations/locations.html"
+                        class="feature-link"
+                    >
+                        Search Colleges →
+                    </a>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        🔎
+                    </div>
+
+                    <h3>
+                        Source Information
+                    </h3>
+
+                    <p>
+                        Results can include source information
+                        and verification details from available
+                        cutoff records.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">
+                        🤖
+                    </div>
+
+                    <h3>
+                        SeatScope HelpBot
+                    </h3>
+
+                    <p>
+                        Get quick explanations about cutoffs,
+                        chances, counselling rounds and
+                        choice-list planning.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         COLLEGE SEARCH PROMO
+    ========================== -->
+
+    <section class="college-search-promo">
+
+        <div class="section-container">
+
+            <div class="promo-card">
+
+                <div>
+
+                    <span class="small-title">
+                        COLLEGE DIRECTORY
+                    </span>
+
+                    <h2>
+                        Looking for a Specific College?
+                    </h2>
+
+                    <p>
+                        Search SeatScope's college directory by
+                        college name or college code and quickly
+                        view available course and location
+                        information.
+                    </p>
+
+                </div>
+
+                <a
+                    href="college-locations/locations.html"
+                    class="primary-btn"
+                >
+                    📍 Open College Search →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section
+        id="about"
+        class="about-section"
+    >
+
+        <div class="section-container">
+
+            <div class="about-content">
+
+                <div>
+
+                    <span class="small-title">
+                        ABOUT SEATSCOPE
+                    </span>
+
+                    <h2>
+                        Making Counselling Research Simpler
+                    </h2>
+
+                    <p>
+                        SeatScope is designed to help students
+                        understand their college and course
+                        possibilities using historical
+                        counselling data.
+                    </p>
+
+                    <p>
+                        Instead of manually comparing multiple
+                        cutoff records, students can enter their
+                        preferences and explore relevant options
+                        in one place.
+                    </p>
+
+                    <p>
+                        SeatScope is a decision-support tool.
+                        It does not replace official counselling
+                        information or guarantee admission.
+                    </p>
+
+                </div>
+
+
+                <div class="about-points">
+
+                    <div class="about-point">
+
+                        <span>
+                            📊
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Historical Data
+                            </strong>
+
+                            <p>
+                                Compare available historical
+                                cutoff records.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="about-point">
+
+                        <span>
+                            🎯
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Student Focused
+                            </strong>
+
+                            <p>
+                                Designed around counselling
+                                decision-making.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="about-point">
+
+                        <span>
+                            🔍
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Source-Aware
+                            </strong>
+
+                            <p>
+                                Source and verification information
+                                can accompany cutoff records.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="about-point">
+
+                        <span>
+                            📋
+                        </span>
+
+                        <div>
+
+                            <strong>
+                                Choice Planning
+                            </strong>
+
+                            <p>
+                                Build a structured counselling
+                                choice list.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="important-info">
+
+                <span>
+                    ℹ️
+                </span>
+
+                <div>
+
+                    <h3>
+                        Important Information
+                    </h3>
+
+                    <p>
+                        SeatScope provides historical indicators
+                        based on available cutoff records.
+                        Historical closing ranks may change from
+                        year to year and from round to round.
+                        The results should be used for research
+                        and choice-list planning only and are not
+                        admission guarantees.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div>
+
+                <a
+                    href="#home"
+                    class="footer-logo"
+                >
+                    Seat<span>Scope</span>
+                </a>
+
+                <p>
+                    KCET counselling research made simpler.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="#home">
+                    Home
+                </a>
+
+                <a href="#how-it-works">
+                    How It Works
+                </a>
+
+                <a href="#features">
+                    Features
+                </a>
+
+                <a href="college-locations/locations.html">
+                    College Search
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 SeatScope. Historical information only.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+         SEATSCOPE JAVASCRIPT
+    ========================== -->
+
+    <script src="script.js"></script>
+
+    <script src="helpbot-loader.js"></script>
+
+</body>
+
+</html>
