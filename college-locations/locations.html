@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SeatScope - College Search</title>
+
+    <link rel="stylesheet" href="locations.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="nav-container">
+
+            <a href="../index.html" class="logo">
+                Seat<span>Scope</span>
+            </a>
+
+            <a href="../index.html" class="back-btn">
+                ← Back to SeatScope
+            </a>
+
+        </div>
+    </header>
+
+
+    <!-- HERO -->
+    <section class="search-hero">
+
+        <div class="hero-content">
+
+            <div class="badge">
+                📍 College Directory
+            </div>
+
+            <h1>
+                Find Your <span>College</span>
+            </h1>
+
+            <p>
+                Search for colleges across Karnataka and quickly view
+                their college code, location and available course information.
+            </p>
+
+            <div class="search-box">
+
+                <span class="search-icon">🔎</span>
+
+                <input
+                    type="text"
+                    id="collegeSearch"
+                    placeholder="Search college name or college code..."
+                    autocomplete="off"
+                >
+
+                <button id="clearSearch" class="clear-btn">
+                    Clear
+                </button>
+
+            </div>
+
+            <div class="search-info">
+                <span id="collegeCount">0 colleges</span>
+                <span>•</span>
+                <span>Search by name or code</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- COLLEGE RESULTS -->
+    <main class="college-section">
+
+        <div class="section-heading">
+
+            <div>
+                <span class="small-title">COLLEGE DIRECTORY</span>
+
+                <h2>
+                    Colleges in Karnataka
+                </h2>
+            </div>
+
+        </div>
+
+
+        <div id="loading" class="loading">
+            Loading colleges...
+        </div>
+
+
+        <div id="emptyState" class="empty-state hidden">
+
+            <div class="empty-icon">
+                🔎
+            </div>
+
+            <h3>
+                No colleges found
+            </h3>
+
+            <p>
+                Try searching with a different college name or code.
+            </p>
+
+        </div>
+
+
+        <div
+            id="collegeList"
+            class="college-grid">
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div>
+            <strong>SeatScope</strong>
+            <span> • College Search</span>
+        </div>
+
+        <p>
+            College information is displayed from the available SeatScope
+            source data.
+        </p>
+
+    </footer>
+
+
+    <script src="locations.js"></script>
+
+</body>
+</html>
